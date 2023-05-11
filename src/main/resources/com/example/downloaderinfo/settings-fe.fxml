@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@mainStyles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.downloaderinfo.SettingsController">
+    <BorderPane>
+    <center>
+        <VBox prefHeight="523.0" prefWidth="700.0" BorderPane.alignment="TOP_CENTER">
+            <children>
+                <HBox>
+                    <children>
+                        <ImageView fitHeight="49.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label prefHeight="49.0" prefWidth="440.0" text="Settings" />
+                    </children>
+                </HBox>
+               <VBox prefHeight="476.0" prefWidth="778.0">
+                  <children>
+                     <HBox prefHeight="48.0" prefWidth="778.0">
+                        <children>
+                           <Label prefHeight="50.0" prefWidth="175.0" text="Path or something" />
+                           <TextField fx:id="textFieldChooseDirToDownloadTo" prefHeight="55.0" prefWidth="431.0" styleClass="text-field" stylesheets="@mainStyles.css" />
+                           <Button mnemonicParsing="false" onAction="#chooseDirToDownloadTo" text="Button" />
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
+               <HBox layoutX="10.0" layoutY="10.0">
+                  <children>
+                     <ImageView fitHeight="49.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" />
+                     <Label prefHeight="49.0" prefWidth="440.0" text="Settings" />
+                  </children>
+               </HBox>
+            </children>
+        </VBox>
+    </center>
+    <left>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <top>
+                <VBox prefHeight="524.0" prefWidth="200.0" styleClass="sideBarLeft" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox>
+                            <children>
+                                <ImageView fitHeight="127.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@logo_temp2.png" />
+                                    </image>
+                                </ImageView>
+                                <Label prefHeight="29.0" prefWidth="201.0" text="Currently playing: Lorem Ipsum" />
+                                <HBox prefHeight="29.0" prefWidth="201.0">
+                                    <children>
+                                        <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="69.0" text="prev" />
+                                        <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="69.0" text="stop/start" />
+                                        <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="69.0" text="next" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                    <padding>
+                    </padding>
+                </VBox>
+            </top></BorderPane>
+    </left>
+    <top>
+        <HBox prefHeight="81.0" prefWidth="890.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="978.0" styleClass="header" stylesheets="@mainStyles.css">
+                    <children>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" styleClass="header">
+                            <image>
+                                <Image url="@house_mm.png" />
+                            </image></ImageView>
+                        <Button alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="100.0" styleClass="btn-selected" stylesheets="@mainStyles.css" text="Menu" textAlignment="CENTER">
+                            <effect>
+                                <Blend />
+                            </effect></Button>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@cog_settings.png" />
+                            </image></ImageView>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="71.0" prefWidth="94.0" stylesheets="@mainStyles.css" text="Settings" />
+                        <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="70.0" prefWidth="155.0" stylesheets="@mainStyles.css" text="your podcast" />
+                        <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="419.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button alignment="BASELINE_LEFT" layoutX="469.0" layoutY="10.0" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="68.0" prefWidth="10.0" stylesheets="@mainStyles.css" text="browse " />
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+    </top>
+    </BorderPane>
+
+</AnchorPane>

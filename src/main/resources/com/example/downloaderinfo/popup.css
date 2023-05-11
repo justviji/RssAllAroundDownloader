@@ -1,0 +1,12 @@
+.popup-content {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+}
+
+.popup-content > .button {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #ffffff;
+}
