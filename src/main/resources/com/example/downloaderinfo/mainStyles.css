@@ -71,7 +71,7 @@
 }
 .scroll-pane{
     -fx-background-color: #1c1c1c;
-    -fx-pref-width: 100%;
+    -fx-pref-width: 1000;
 }
 
 

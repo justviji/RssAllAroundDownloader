@@ -3,6 +3,7 @@ package com.example.downloaderinfo;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -40,10 +41,10 @@ public class AddPaneController {
 
     public void showAvailiblePodcasts() throws IOException {
         Popup viewPopup = new Popup();
-        PopupAddFunction controller = new PopupAddFunction();
+        //PopupAddFunction controller = new PopupAddFunction();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("popup-add-function.fxml"));
-        loader.setController(controller);
-        viewPopup.getContent().add(loader.load());
+        //loader.setController(controller);
+        viewPopup.getContent().setAll((Node) loader.load());
         viewPopup.show(stage);
 
     }

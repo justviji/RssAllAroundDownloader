@@ -19,7 +19,7 @@ public class Downloader extends Application {
     public static Scene settingsSchene;
     public static Stage stage;
     public static Scene currentSchene;
-    public static File downloadPath = new File("");
+    public static File downloadPath = new File(System.getProperty("user.dir"));
     public static File csvFileForSavingRss = new File("./feed-entries.csv");
     public static File settings = new File("./settings.txt");
     public static File defaultSettings = new File("./default-settings.txt");
