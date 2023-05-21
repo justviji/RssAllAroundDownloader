@@ -2,6 +2,7 @@ module com.example.downloaderinfo {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.xml;
+    requires javafx.media;
     requires rome;
     requires rome.fetcher;
 

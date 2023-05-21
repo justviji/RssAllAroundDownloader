@@ -1,8 +1,10 @@
 package com.example.downloaderinfo;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -25,15 +27,11 @@ public class Downloader extends Application {
     public static File defaultSettings = new File("./default-settings.txt");
     public static final int WIDTH = 1000;
     public static final int HEIGHT = 650;
+    public static boolean podcastStopped = true;
 
-    public void initialize(){
-        try {
-            updateSettings();
-        }catch (Exception e){
+    public static PodcastEntry currentlyPlaying;
 
-        }
 
-    }
 
     void createDefaultSettingsFile(File override) throws IOException {
         FileWriter fw = new FileWriter(override);

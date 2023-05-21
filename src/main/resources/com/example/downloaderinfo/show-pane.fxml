@@ -8,12 +8,10 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@mainStyles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.downloaderinfo.ShowPaneController">
     <BorderPane>
         <left>
-            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="s" stylesheets="@mainStyles.css" BorderPane.alignment="CENTER">
                 <top>
                     <VBox prefHeight="524.0" prefWidth="200.0" styleClass="sideBarLeft" BorderPane.alignment="CENTER">
                         <children>
-                     <Label prefHeight="70.0" prefWidth="200.0" text="set path in settings" />
-                     <Button mnemonicParsing="false" prefHeight="61.0" stylesheets="@mainStyles.css" text="update list " />
                             <VBox>
                                 <children>
                                     <ImageView fitHeight="127.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
@@ -21,12 +19,10 @@
                                             <Image url="@logo_temp2.png" />
                                         </image>
                                     </ImageView>
-                                    <Label prefHeight="29.0" prefWidth="201.0" text="Currently playing: Lorem Ipsum" />
+                                    <Label prefHeight="29.0" prefWidth="201.0" text="Currently playing: Lorem Ipsum" fx:id="currentlyPlaying"/>
                                     <HBox prefHeight="29.0" prefWidth="201.0">
                                         <children>
-                                            <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="69.0" text="prev" />
-                                            <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="69.0" text="stop/start" />
-                                            <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="69.0" text="next" />
+                                            <Button mnemonicParsing="false" onAction="#startStop" prefHeight="29.0" prefWidth="69.0" text="stop/start" />
                                         </children>
                                     </HBox>
                                 </children>
@@ -46,7 +42,7 @@
                                 <image>
                                     <Image url="@house_mm.png" />
                                 </image></ImageView>
-                            <Button alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="100.0" styleClass="btn-selected" stylesheets="@mainStyles.css" text="Menu" textAlignment="CENTER">
+                            <Button alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="100.0" styleClass="btn-selected" stylesheets="@mainStyles.css" text="Menu" textAlignment="CENTER" onAction="#returnToMainMenu">
                                 <effect>
                                     <Blend />
                                 </effect></Button>
@@ -54,18 +50,25 @@
                                 <image>
                                     <Image url="@cog_settings.png" />
                                 </image></ImageView>
-                            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="71.0" prefWidth="94.0" stylesheets="@mainStyles.css" text="Settings" />
+                            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="71.0" prefWidth="94.0" stylesheets="@mainStyles.css" text="Settings" onAction="#goToSettingsSchene"/>
                             <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-                            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="70.0" prefWidth="155.0" stylesheets="@mainStyles.css" text="your podcast" />
+                            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="70.0" prefWidth="155.0" stylesheets="@mainStyles.css" text="your podcast" onAction="#changeToYourPodcasts"/>
                             <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="419.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-                            <Button alignment="BASELINE_LEFT" layoutX="469.0" layoutY="10.0" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="68.0" prefWidth="10.0" stylesheets="@mainStyles.css" text="browse " />
+                            <Button alignment="BASELINE_LEFT" layoutX="469.0" layoutY="10.0" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="68.0" prefWidth="10.0" stylesheets="@mainStyles.css" text="browse " onAction="#showAvailiblePodcasts"/>
                         </children>
                     </HBox>
                 </children>
             </HBox>
         </top>
       <center>
-         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+               <ScrollPane fx:id="scrollpanePodcastWrapper" prefHeight="526.0" prefWidth="778.0">
+                 <content>
+                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                 </content>
+               </ScrollPane>
+            </children></VBox>
       </center>
     </BorderPane>
 

@@ -2,7 +2,7 @@
     -fx-background-color: #0e0e0e;
 }
 .header{
-        -fx-background-color: #1c1c1c;
+    -fx-background-color: #1c1c1c;
     -fx-border-radius: 4;
     -fx-alignment: center-left;
     -fx-end-margin: 10;
@@ -69,8 +69,15 @@
     -fx-border-radius: 4;
     -fx-font-size: 18;
 }
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
 .scroll-pane{
     -fx-background-color: #1c1c1c;
+    -fx-border-radius: 4;
+    -fx-alignment: center-left;
+    -fx-end-margin: 10;
+    -fx-background-radius: 4;
     -fx-pref-width: 1000;
 }
 

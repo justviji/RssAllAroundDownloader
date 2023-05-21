@@ -25,6 +25,13 @@
             <artifactId>javafx-fxml</artifactId>
             <version>17.0.2</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx.media -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-media</artifactId>
+            <version>15</version>
+            <type>pom</type>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/com.rometools/rome -->
         <dependency>
             <groupId>com.rometools</groupId>

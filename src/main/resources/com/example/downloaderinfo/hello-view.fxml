@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane fx:id="mainBackground" prefHeight="615.0" prefWidth="986.0" style="-fx-padding: 0 0 0 0; -fx-spacing: 10"
-            stylesheets="@mainStyles.css"
-            xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.downloaderinfo.DownloaderController">
+<BorderPane fx:id="mainBackground" prefHeight="615.0" prefWidth="986.0" style="-fx-padding: 0 0 0 0; -fx-spacing: 10" stylesheets="@mainStyles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.downloaderinfo.DownloaderController">
     <center>
       <VBox prefHeight="523.0" prefWidth="900.0" BorderPane.alignment="TOP_CENTER">
          <children>
             <HBox>
                <children>
                   <ImageView fitHeight="49.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label prefHeight="49.0" prefWidth="440.0" text="MAIN MENU" />
+                  <Label prefHeight="49.0" prefWidth="440.0" />
                </children>
             </HBox>
             <GridPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="784.0" styleClass="gridpaneWrapper" stylesheets="@mainStyles.css">
@@ -34,33 +29,32 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="100.0" styleClass="gridpane" stylesheets="@mainStyles.css">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="154.0" text="DOWNLOADER" />
+                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="154.0" text="MAIN MENU" />
                      </children>
                   </VBox>
                   <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="79.0" prefWidth="160.0" styleClass="gridpane" stylesheets="@mainStyles.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" stylesheets="@mainStyles.css" text="CURRENTLY PLAYING" />
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" stylesheets="@mainStyles.css" />
                      </children>
                   </VBox>
                   <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="162.0" styleClass="gridpane" stylesheets="@mainStyles.css" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" text="YOUR PODCASTS" />
+                        <Button mnemonicParsing="false" onAction="#changeToYourPodcasts" prefHeight="25.0" prefWidth="148.0" text="YOUR PODCASTS" />
                      </children>
                   </VBox>
                   <VBox layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="162.0" styleClass="gridpane" stylesheets="@mainStyles.css" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" text="BROWSE" />
+                        <Button mnemonicParsing="false" onAction="#browseAvaiblePodcasts" prefHeight="25.0" prefWidth="151.0" text="BROWSE" />
                      </children>
                   </VBox>
                   <VBox layoutX="9.0" layoutY="115.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="162.0" styleClass="gridpane" stylesheets="@mainStyles.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" text="ADD MP3 FILE" />
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" />
                      </children>
                   </VBox>
                   <VBox prefHeight="137.0" prefWidth="161.0" styleClass="gridpane" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="156.0" />
-                        <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="154.0" text="ADD RSS"  onAction="#rssChangeToAddSchene"/>
+                        <Button mnemonicParsing="false" onAction="#rssChangeToAddSchene" prefHeight="85.0" prefWidth="154.0" text="ADD RSS" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
@@ -69,7 +63,7 @@
                            <children>
                               <VBox prefHeight="200.0" prefWidth="100.0" styleClass="gridpane" stylesheets="@mainStyles.css">
                                  <children>
-                                    <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="154.0" text="idk" />
+                                    <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="154.0" />
                                  </children>
                               </VBox>
                            </children>
@@ -78,12 +72,12 @@
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0" styleClass="gridpane" stylesheets="@mainStyles.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="154.0" text="idk" />
+                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="154.0" />
                      </children>
                   </VBox>
                   <VBox layoutX="293.0" layoutY="233.0" prefHeight="200.0" prefWidth="100.0" styleClass="gridpane" stylesheets="@mainStyles.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="154.0" text="idk" />
+                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="154.0" />
                      </children>
                   </VBox>
                </children>
@@ -92,9 +86,9 @@
       </VBox>
     </center>
    <left>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="s" stylesheets="@mainStyles.css" BorderPane.alignment="CENTER">
          <top>
-            <VBox prefHeight="526.0" prefWidth="203.0" styleClass="sideBarLeft" BorderPane.alignment="CENTER">
+            <VBox prefHeight="524.0" prefWidth="200.0" styleClass="sideBarLeft" BorderPane.alignment="CENTER">
                <children>
                   <VBox>
                      <children>
@@ -103,19 +97,16 @@
                               <Image url="@logo_temp2.png" />
                            </image>
                         </ImageView>
-                        <Label prefHeight="29.0" prefWidth="201.0" text="Currently playing: Lorem Ipsum" />
+                        <Label fx:id="currentlyPlaying" prefHeight="29.0" prefWidth="201.0" text="Currently playing: Lorem Ipsum" />
                         <HBox prefHeight="29.0" prefWidth="201.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="69.0" text="prev" />
-                              <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="69.0" text="stop/start" />
-                              <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="69.0" text="next" />
+                              <Button mnemonicParsing="false" onAction="#startStop" prefHeight="29.0" prefWidth="69.0" text="stop/start" />
                            </children>
                         </HBox>
                      </children>
                   </VBox>
                </children>
                <padding>
-                  <Insets top="200.0" />
                </padding>
             </VBox>
          </top></BorderPane>
@@ -129,20 +120,19 @@
                      <image>
                         <Image url="@house_mm.png" />
                      </image></ImageView>
-                  <Button alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="100.0" stylesheets="@mainStyles.css" text="Menu" textAlignment="CENTER">
+                  <Button alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#returnToMainMenu" prefHeight="76.0" prefWidth="100.0" styleClass="btn-selected" stylesheets="@mainStyles.css" text="Menu" textAlignment="CENTER">
                      <effect>
                         <Blend />
                      </effect></Button>
                   <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@cog_settings.png" />
-                     </image>
-                  </ImageView>
-                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#changeToSettings" onMouseEntered="#highlightImageViewNextToButton" onMouseExited="#nothighlightImageViewNextToButton" prefHeight="71.0" prefWidth="94.0" stylesheets="@mainStyles.css" text="Settings" />
+                     </image></ImageView>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#goToSettingsSchene" prefHeight="71.0" prefWidth="94.0" stylesheets="@mainStyles.css" text="Settings" />
                   <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="90.0" prefWidth="166.0" stylesheets="@mainStyles.css" text="your podcast" />
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#changeToYourPodcasts" prefHeight="70.0" prefWidth="155.0" stylesheets="@mainStyles.css" text="your podcast" />
                   <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="419.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-                  <Button alignment="BASELINE_LEFT" layoutX="469.0" layoutY="10.0" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="90.0" prefWidth="116.0" stylesheets="@mainStyles.css" text="browse " />
+                  <Button alignment="BASELINE_LEFT" layoutX="469.0" layoutY="10.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#showAvailiblePodcasts" prefHeight="68.0" prefWidth="10.0" stylesheets="@mainStyles.css" text="browse " />
                </children>
             </HBox>
          </children>

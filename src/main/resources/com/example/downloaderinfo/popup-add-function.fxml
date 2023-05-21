@@ -3,14 +3,19 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane minHeight="400.0" minWidth="600" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.downloaderinfo.PopupAddFunction">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.downloaderinfo.PopupAddFunction">
     <BorderPane styleClass="root" stylesheets="@mainStyles.css">
-      <top>
-         <ScrollPane fx:id="scrollpaneMid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="596.0" BorderPane.alignment="CENTER">
-           <content>
-             <AnchorPane minHeight="400.0" minWidth="600.0" prefHeight="398.0" prefWidth="600.0" />
-           </content>
-         </ScrollPane>
-      </top></BorderPane>
+        <top>
+            <ScrollPane fx:id="scrollpaneMid" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="599.0" />
+                </content>
+            </ScrollPane>
+        </top>
+      <bottom>
+         <Button mnemonicParsing="false" text="EXIT" BorderPane.alignment="CENTER" onAction="#exit"/>
+      </bottom>
+        
+    </BorderPane>
 
 </AnchorPane>

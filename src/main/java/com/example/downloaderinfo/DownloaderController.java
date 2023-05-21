@@ -14,25 +14,53 @@ import java.io.*;
 import java.util.Objects;
 
 import static com.example.downloaderinfo.Downloader.*;
+import static com.example.downloaderinfo.ShowPaneController.currentlyPlayingAudio;
 
 public class DownloaderController {
 
-
-    public void changeToSettings(ActionEvent actionEvent) {
-        currentSchene = settingsSchene;
-        stage.setScene(currentSchene);
-    }
-
-    public void highlightImageViewNextToButton(MouseEvent mouseEvent) {
-    }
-
-    public void nothighlightImageViewNextToButton(MouseEvent mouseEvent) {
-    }
-
+    public Label currentlyPlaying;
     public void rssChangeToAddSchene(ActionEvent actionEvent) {
         currentSchene = addPaneSchene;
         stage.setScene(currentSchene);
 
+    }
+    public void changeToYourPodcasts(ActionEvent actionEvent){
+        currentSchene = showElements;
+        stage.setScene(currentSchene);
+    }
+    public void showAvailiblePodcasts(ActionEvent actionEvent) throws IOException {
+        AddPaneController.showAvailiblePodcasts();
+    }
+    @FXML
+    void returnToMainMenu(){
+        currentSchene = defaultScene;
+        stage.setScene(currentSchene);
+    }
+    @FXML
+    void goToSettingsSchene(){
+        currentSchene = settingsSchene;
+        stage.setScene(currentSchene);
+    }
+    @FXML
+    void browseAvaiblePodcasts() throws IOException {
+        AddPaneController.showAvailiblePodcasts();
+    }
+
+    public void startStop(ActionEvent actionEvent) {
+        if (podcastStopped){
+            if (currentlyPlayingAudio != null) {
+                currentlyPlayingAudio.stop();
+                currentlyPlayingAudio.dispose();
+                currentlyPlayingAudio = null;
+            }
+        }else{
+            currentlyPlayingAudio.play();
+        }
+    }
+    @FXML
+    void initialize(){
+        if (Downloader.currentlyPlaying != null)
+            currentlyPlaying.setText(Downloader.currentlyPlaying.title);
     }
 }
 
