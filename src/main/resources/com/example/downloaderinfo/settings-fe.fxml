@@ -83,7 +83,7 @@
                             </image></ImageView>
                         <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="71.0" prefWidth="94.0" stylesheets="@mainStyles.css" text="Settings" />
                         <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="70.0" prefWidth="155.0" stylesheets="@mainStyles.css" text="your podcast" />
+                        <Button alignment="BASELINE_LEFT" minHeight="141.0" mnemonicParsing="false" prefHeight="141.0" prefWidth="155.0" stylesheets="@mainStyles.css" text="your podcast" />
                         <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="419.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
                         <Button alignment="BASELINE_LEFT" layoutX="469.0" layoutY="10.0" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="68.0" prefWidth="10.0" stylesheets="@mainStyles.css" text="browse " />
                     </children>

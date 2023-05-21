@@ -116,6 +116,7 @@ public class RSSFeedParser {
     }
 
     public static InputStream read() {
+        //TODO: change to the file read
         try {
             return url.openStream();
         } catch (IOException e) {

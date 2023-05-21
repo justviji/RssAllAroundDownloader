@@ -5,12 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+
 
 
 public class Downloader extends Application {
@@ -21,13 +19,77 @@ public class Downloader extends Application {
     public static Scene settingsSchene;
     public static Stage stage;
     public static Scene currentSchene;
-    public static File downloadPath;
+    public static File downloadPath = new File("");
+    public static File csvFileForSavingRss = new File("./feed-entries.csv");
+    public static File settings = new File("./settings.txt");
+    public static File defaultSettings = new File("./default-settings.txt");
     public static final int WIDTH = 1000;
     public static final int HEIGHT = 650;
+
+    public void initialize(){
+        try {
+            updateSettings();
+        }catch (Exception e){
+
+        }
+
+    }
+
+    void createDefaultSettingsFile(File override) throws IOException {
+        FileWriter fw = new FileWriter(override);
+        fw.write("""
+                #do not move the settings file somewhere else it won't be read
+                
+                #download path:
+                
+                ./downloads/
+                
+                #csv for the accessed feeds"
+                
+                ./feed-entries.csv
+                
+                #current location of the settings file:
+                
+                ./settings.txt
+                
+                #update in here or in the settings of your instance of your reader to modify any value
+                
+                #if this file is not found or has errors in it it will reset to default and must be changed again!
+                """);
+        fw.close();
+
+    }
+    public static void updateSettings() throws FileNotFoundException {
+        try (BufferedReader br = new BufferedReader(new FileReader(settings))) {
+            String line;
+            int settingsOffset = 0;
+            while ((line = br.readLine()) != null) {
+                if (line.trim().charAt(0) != '#'){
+                    switch (settingsOffset) {
+                        case 0 -> downloadPath = new File(line.trim());
+                        case 1 -> csvFileForSavingRss = new File(line.trim());
+                        case 2 -> settings = new File(line.trim());
+                    }
+                    settingsOffset++;
+
+                }
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
 
 
     @Override
     public void start(Stage stage) throws IOException {
+        if (!defaultSettings.exists()){
+            if(defaultSettings.createNewFile()){
+                //createDefaultSettingsFile(settings);
+                createDefaultSettingsFile(defaultSettings);
+            }
+        }
 
         Downloader.stage = stage;
         //first schene and main menu

@@ -1,0 +1,9 @@
+#do not move the settings file somewhere else it won't be read
+#download path:
+./downloads/
+#csv for the accessed feeds"
+./feed-entries.csv
+#current location of the settings file:
+./settings.txt
+#update in here or in the settings of your instance of your reader to modify any value
+#if this file is not found or has errors in it it will reset to default and must be changed again!

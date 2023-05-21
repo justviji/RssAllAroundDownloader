@@ -1,46 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.effect.Blend?>
-<?import javafx.scene.image.Image?>
-<BorderPane prefHeight="550.0" prefWidth="900.0" style="-fx-alignment: center" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.downloaderinfo.AddPaneController">
+<BorderPane prefHeight="550.0" prefWidth="900.0" style="-fx-alignment: center" stylesheets="@mainStyles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.downloaderinfo.AddPaneController">
     <center>
-        <VBox>
-            <HBox>
-                <!--add stuff here -->
-            </HBox>
-            <FlowPane style="-fx-alignment: center; -fx-font-family: 'Montserrat';-fx-spacing: 14; -fx-font-size: 14">
-                <Label text="Write your link here:" />
-            </FlowPane>
-            <FlowPane style="-fx-alignment: center; -fx-font-family: 'Montserrat';-fx-spacing: 12; -fx-font-size: 12">
-                <TextArea fx:id="insertTextArea" promptText="ex. Peters_Podcast_der_Geometrie" style="-fx-border-color: BLACK; -fx-border-insets: 0" />
-            </FlowPane>
-            <FlowPane fx:id="buttons" style="-fx-alignment: center">
-                <Button fx:id="downlaodButton" alignment="CENTER" contentDisplay="CENTER" onAction="#downloadNoFileAdd" style=" -fx-alignment: center; -fx-font-family: 'Montserrat';-fx-spacing: 14; -fx-font-size: 14" text="Download from link">
-                    <font>
-                        <Font name="Bell MT" size="12.0" />
-                    </font>
-                    <cursor>
-                        <Cursor fx:constant="DEFAULT" />
-                    </cursor></Button>
-                <Button fx:id="choosePath" onAction="#setFileToDownloadTo" style=" -fx-alignment: center; -fx-font-family: 'Montserrat';-fx-spacing: 14; -fx-font-size: 14" text="choose path" />
-                <Button fx:id="downlaodButtonWithAdd" onAction="#downloadWithFileAdd" style=" -fx-alignment: center; -fx-font-family: 'Montserrat';-fx-spacing: 14; -fx-font-size: 14" text="Download from link and add the  file to rss list" />
-            </FlowPane>
-            <FlowPane prefHeight="200.0" prefWidth="200.0">
-                <children>
-                    <Label fx:id="chosenPath" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="476.0" style="-fx-font-family: 'Montserrat'; -fx-spacing: 14; -fx-font-size: 14; -fx-background-position: 50%;" text="here  will be the chosen path  to your file" />
-                    <Label fx:id="recentlyDownloadedFile" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="480.0" style="-fx-font-family: 'Montserrat'; -fx-spacing: 14; -fx-font-size: 14;" text="most recently downloaded file will be shown here" wrapText="true" />
-                </children>
-            </FlowPane>
+        <VBox prefHeight="523.0" prefWidth="700.0" BorderPane.alignment="TOP_CENTER">
+            <children>
+                <HBox>
+                    <children>
+                        <ImageView fitHeight="49.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label prefHeight="49.0" prefWidth="440.0" text="Settings" />
+                    </children>
+                </HBox>
+                <VBox prefHeight="476.0" prefWidth="778.0">
+                    <children>
+                        <HBox prefHeight="48.0" prefWidth="778.0">
+                            <children>
+                                <Label prefHeight="50.0" prefWidth="175.0" text="put link here" />
+                                <TextField fx:id="insertTextField" prefHeight="55.0" prefWidth="431.0" styleClass="text-field" stylesheets="@mainStyles.css" />
+                                <Button mnemonicParsing="false" onAction="#parseRssAndAddToCSV" text="Button" />
+                            </children>
+                        </HBox>
+                  <HBox>
+                     <children>
+                        <Button mnemonicParsing="false" text="Show downloadable podcasts" onAction="#showAvailiblePodcasts"/>
+                     </children>
+                  </HBox>
+                    </children>
+                </VBox>
+                <HBox layoutX="10.0" layoutY="10.0">
+                    <children>
+                        <ImageView fitHeight="49.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label prefHeight="49.0" prefWidth="440.0" text="Settings" />
+                    </children>
+                </HBox>
+            </children>
         </VBox>
     </center>
     <left>
-        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="s" stylesheets="@mainStyles.css" BorderPane.alignment="CENTER">
             <top>
                 <VBox prefHeight="524.0" prefWidth="200.0" styleClass="sideBarLeft" BorderPane.alignment="CENTER">
                     <children>

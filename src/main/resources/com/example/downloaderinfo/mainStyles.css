@@ -22,10 +22,14 @@
     -fx-pref-columns: 1;
     -fx-pref-height: 200;
     -fx-pref-width: 200;
-    -fx-max-height: 200;
+    -fx-max-height: 50;
     -fx-max-width: 300;
     -fx-border-radius: 4;
     -fx-text-fill: #7f7f7f;
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+
+
 
 }
 .sideBarLeft{
@@ -61,8 +65,13 @@
     -fx-background-color: #2c2c2c;
     -fx-text-fill: #7f7f7f;
     -fx-pref-height: 200;
+    -fx-max-height: 200;
     -fx-border-radius: 4;
     -fx-font-size: 18;
+}
+.scroll-pane{
+    -fx-background-color: #1c1c1c;
+    -fx-pref-width: 100%;
 }
 
 
